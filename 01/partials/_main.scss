@@ -1,0 +1,20 @@
+.error{
+    background: $errorColor;
+    color: white;
+}
+
+@for $i from 12 through 22{
+    .paragraph-#{$i} {
+        font-size: $i * 1px
+    }
+    .paragraph-#{$i}--error {
+        font-size: $i * 1px;
+        color: $errorColor;
+    }
+
+}
+
+
+
+
+
