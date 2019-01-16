@@ -1,0 +1,41 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.shop-layout {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  grid-template-columns: 1fr 1200px 1fr;
+  grid-template-rows: 100px 1fr 200px;
+  grid-template-areas:
+    "top top top"
+    ". main ."
+    "foot foot foot"
+}
+
+.c-header {
+  grid-area: top;
+}
+
+.c-maincontent {
+  grid-area: main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.c-footer {
+  grid-area: foot;
+}

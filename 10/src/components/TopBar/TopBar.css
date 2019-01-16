@@ -1,0 +1,58 @@
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 60px;
+}
+
+.c-header {
+  background-color: #282c34;
+display: flex;
+justify-content: center;
+  height: 100px;
+  color: white;
+}
+
+.c-header__content {
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.c-header__content > *{
+  margin-right: 1rem;
+}
+.c-header_cart{
+  margin: auto 0 auto auto;
+
+}
+.c-nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.c-nav__link{
+  color:#fff;
+  padding: 0.5em 1em;
+  border:1px dotted rgba(255,255,255,0.3);
+  margin: auto 0.5em;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.c-nav__link:hover {
+border:1px solid rgba(255, 255, 255, 1);
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
