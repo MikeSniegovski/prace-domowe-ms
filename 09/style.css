@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#game {
+    width: 200px;
+    height: 200px;
+    background: black;
+    cursor: none;
+    margin: 30vh auto;
+    position: relative;
+}
+
+#cross {
+    width: 21px;
+    height: 21px;
+    border: 1px dotted red;
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    border-radius: 50%;
+
+}
+
+#cross:before {
+    content: "";
+    width: 1px;
+    height: 1px;
+    background: red;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin: 0;
+    padding: 0;
+}
+
+.enemy {
+    width: 10px;
+    height: 10px;
+    background: green;
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.blue {
+    background: blue;
+    border-radius: 50%;
+}
+
+.yellow {
+    background: transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-left: 10px solid yellow;
+    transition: all 0.5s;
+}

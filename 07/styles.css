@@ -1,0 +1,159 @@
+* {
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  margin: 10px auto;
+  max-width: 1000px;
+}
+
+@media print {
+  .root {
+    display: none;
+  }
+}
+
+.shopping-list {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.shopping-list li {
+  padding: 2px;
+  margin: 5px 0px;
+  border: 1px solid lightgrey;
+}
+
+.shopping-list li:hover {
+  border: 1px solid gray;
+}
+
+.shopping-list li span {
+  display: inline-block;
+}
+
+.shopping-list li .checkbox {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.shopping-list li .name {
+  width: 300px;
+}
+
+.shopping-list li .category {
+  width: 200px;
+}
+
+.shopping-list li .shops span {
+  margin-right: 5px;
+}
+
+.shopping-list li .button {
+  float: right;
+}
+
+.add-new, .filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.add-new :first-child, .filters :first-child {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.add-new div, .filters div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-right: 10px;
+}
+
+.add-new div span, .filters div span {
+  margin-right: 5px;
+}
+
+.add-new__actions, .filters__actions {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.button {
+  cursor: pointer;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.button:hover {
+  background-color: lightgray;
+}
+
+input, select {
+  padding: 1px 0px;
+  border: 1px solid lightgray;
+}
+
+input:hover, select:hover {
+  border: 1px solid gray;
+}
+
+.summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.summary ul {
+  list-style-type: none;
+  padding: 0px;
+  margin-right: 25px;
+}
+
+.summary .summary-item-name:hover {
+  cursor: pointer;
+}
+
+.print {
+  border: 1px solid lightgray;
+  display: inline-block;
+  margin: 5px;
+}
+
+.print ul {
+  list-style-type: none;
+  padding: 0px;
+  margin-right: 25px;
+}
+
+.short-list {
+  padding: 5px;
+}
+
+.short-list h5 {
+  margin: 5px;
+}
+
+.short-list ul {
+  margin: 5px;
+}
+/*# sourceMappingURL=styles.css.map */

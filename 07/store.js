@@ -120,16 +120,21 @@ const store = {
     // obiekt filter ma strukturę: { name: string, category: string, shops: [string] }
     // żeby sprawdzić czy waunek dla shops jest prawdziwy sprawdź, czy jakikolwiek
     // przesłany element znajduje się w obiekcie tabeli todos (funkcja some) 
-    let todos = this.getData('todos');
-    // 'cola'.indexOf('co') === 0;
-    // 'cola'.indexOf('la') === 2;
-    // 'cola'.indexOf('lk') === -1;
-    todos = todos
-      .filter(x => !filter.name || x.name.indexOf(filter.name) !== -1)
-      .filter() // category
-      .filter() // shops; shops jest tablicą; zastosuj warunek lub ||
+    if (!filter.name && !filter.category && filter.shops.length === 0) {
+      console.log('filtr pusty');
+    } else {
 
-    appStart(todos);
+      let todos = this.getData('todos');
+      // 'cola'.indexOf('co') === 0;
+      // 'cola'.indexOf('la') === 2;
+      // 'cola'.indexOf('lk') === -1;
+      todos = todos
+        .filter(x => !filter.name || x.name.indexOf(filter.name) !== -1)
+        .filter(x => filter.category === x.category) // category
+        // .filter(x => x.shops.some()) // shops; shops jest tablicą; zastosuj warunek lub ||
+
+      appStart(todos);
+    }
   },
 
   // funkcja wywoływana na zdarzenie kliknięcia przycisku [sortuj po nazwie],
